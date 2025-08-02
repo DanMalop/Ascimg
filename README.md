@@ -1,7 +1,23 @@
 
 # Ascimg: Your Image to ASCII Art Converter 🎨
 
-!(<https://via.placeholder.com/600x300?text=Ascimg+Demo+Image>) <!-- Replace this image with a real example of your ASCII art! -->
+............................................................................
+............................................................................
+........▓▓▓........▓▓▓▓▓........▓▓▓▓▓....▓▓▓..▓▓▓▓.....▓▓▓..... ▓▓▓▓▓ ......
+........▓▓▓▓......▓▓▓▓▓▓▓▓....▓▓▓▓▓▓▓▓...▓▓▓..▓▓▓▓▓...▓▓▓▓....▓▓▓▓▓▓▓▓▓.....
+....... ▓▓▓▓.....▓▓▓...▓▓▓....▓▓▓...▓▓▓..▓▓▓..▓▓▓▓▓...▓▓▓▓...▓▓▓▓...▓▓▓ ....
+.......▓▓▓▓▓.....▓▓▓....▓▓...▓▓▓.....▓▓..▓▓▓..▓▓▓▓▓...▓▓▓▓...▓▓▓.....▓▓▓....
+.......▓▓.▓▓▓....▓▓▓▓........▓▓ .........▓▓▓..▓▓▓▓▓▓.▓▓▒▓▓...▓▓.............
+......▓▓▓. ▓▓.....▓▓▓▓▓▓.... ▓▓..........▓▓▓..▓▓▓.▓▓.▓▓.▓▓..▓▓▓.............
+......▓▓▓..▓▓▓.....▓▓▓▓▓▓▓...▓▓..........▓▓▓..▓▓▓.▓▓.▓▓.▓▓..▓▓▓....▓▓▓▓▓....
+..... ▓▓...▓▓▓........▒▓▓▓▓. ▓▓..........▓▓▓..▓▓▓.▓▓ ▓▓.▓▓..▓▓▓....▓▓▓▓▓....
+.....▓▓▓▓▓▓▓▓▓..........▓▓▓..▓▓ .....▓...▓▓▓..▓▓▓.▓▓▓▓▒.▓▓.. ▓▓......▓▓▓....
+.....▓▓▓▓▓▓▓▓▓▓..▓▓▓....▓▓▓..▓▓▓....▓▓▓..▓▓▓..▓▓▓..▓▓▓..▓▓...▓▓▓.....▓▓▓....
+.....▓▓......▓▓..▓▓▓▓..▓▓▓▓.. ▓▓▓ .▓▓▓▓..▓▓▓..▓▓▓..▓▓▓..▓▓....▓▓▓ ..▓▓▓▓....
+....▓▓▓......▓▓▓..▓▓▓▓▓▓▓▓....░▓▓▓▓▓▓▓...▓▓▓..▓▓▓..▓▓▓..▓▓....▒▓▓▓▓▓▓▓▓ ....
+....▓▓ ......▓▓▓....▓▓▓▓........▓▓▓▓.....▓▓▓..▓▓▓..▓▓▒..▓▓......▓▓▓▓▓ ......
+............................................................................
+............................................................................
 
 **Ascimg** is a command-line tool written in Python that allows you to transform any image into vibrant (or not so vibrant) ASCII art. With customization options for scaling and characters, you can create unique artworks directly in your terminal or save them to a file.
 
@@ -40,7 +56,7 @@ The easiest way to install `Ascimg` is by using the `build_and_deploy_py.py` aut
 1. **Clone the repository:**
 
     ```bash
-    git clone [https://github.com/your_username/ascimg.git](https://github.com/your_username/ascimg.git) # Replace 'your_username/ascimg' with the actual path to your repository
+    git clone https://github.com/DanMalop/Ascimg.git
     cd ascimg
     ```
 
@@ -56,7 +72,7 @@ The easiest way to install `Ascimg` is by using the `build_and_deploy_py.py` aut
     This script will create a virtual environment, install dependencies, compile `main.py` into an executable named `ascimg` (using Nuitka), and copy it to `/usr/local/bin`.
 
     ```bash
-    sudo python3 build_and_deploy_py.py
+    sudo ./install.sh
     ```
 
     You will be prompted for your `sudo` password to copy the executable to the system directory.
@@ -117,7 +133,7 @@ ascimg <path_to_your_image> [options]
 Here are all the available options for `ascimg`:
 
 ```
-usage: ascimg [-h] [--scale SCALE] [--width WIDTH] [--chars CHARS] [--output OUTPUT] image_path
+usage: ascimg [-h] [--scale SCALE] [--output OUTPUT] image_path
 
 Converts an image to ASCII art.
 
@@ -131,16 +147,6 @@ options:
                         A smaller value (e.g., 0.05) produces denser ASCII art.
                         This value is ignored if --width is used.
                         Default: 0.1
-  --width WIDTH, -w WIDTH
-                        Desired width of the ASCII output image.
-                        If specified, the image will be resized to this width
-                        and the aspect ratio will be maintained. Ignores --scale.
-  --chars CHARS, -c CHARS
-                        String of ASCII characters to use, ordered from darkest to lightest.
-                        Examples:
-                          '@%#*+=-:. '
-                          ' .:-=+*#%@' (if you want to invert the mapping, darkest = space)
-                        Default: @%#*+=-:. 
   --output OUTPUT, -o OUTPUT
                         Path to the file where the ASCII art will be saved.
                         If not specified, it will be printed to the console.
@@ -156,10 +162,4 @@ Contributions are welcome! If you have ideas to improve `Ascimg`, feel free to o
 
 ## License 📄
 
-This project is licensed under the MIT License. See the `LICENSE` file for more details.
-
----
-
-## Contact ✉️
-
-Questions or comments? You can contact the author at [your_email@example.com](mailto:your_email@example.com) or through GitHub `issues`.
+This project is licensed under the GPL License. See the `LICENSE` file for more details.
