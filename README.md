@@ -43,7 +43,7 @@ The easiest way to install `Ascimg` is by using the `build_and_deploy_py.py` aut
 
     ```bash
     git clone https://github.com/DanMalop/Ascimg.git
-    cd ascimg
+    cd Ascimg
     ```
 
 2. **Ensure you have the `requirements.txt` file:**
