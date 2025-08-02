@@ -1,7 +1,7 @@
 
 # Ascimg: Your Image to ASCII Art Converter 🎨
 
-!Project logo <https://github.com/DanMalop/Ascimg/blob/main/assets/ASCIMG.png?raw=true>
+![Project logo](https://github.com/DanMalop/Ascimg/blob/main/assets/ASCIMG.png?raw=true)
 
 ---
 
