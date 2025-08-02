@@ -64,7 +64,7 @@ def main():
     parser.add_argument(
         "-s",
         "--scale",
-        default=0.5,
+        default=0.3,
         help="sets the scale of the display relative to the original image size",
         type=float,
     )

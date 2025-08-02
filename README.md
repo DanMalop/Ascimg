@@ -76,7 +76,7 @@ ascimg <path_to_your_image> [options]
 
 **Examples:**
 
-* **Convert an image with the default scale factor (0.1) and print to console:**
+* **Convert an image with the default scale factor (0.3) and print to console:**
 
     ```bash
     ascimg photos/my_image.png
