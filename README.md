@@ -115,7 +115,7 @@ ascimg <path_to_your_image> [options]
 Here are all the available options for `ascimg`:
 
 ```
-usage: ascimg [-h] [--scale SCALE] [--output OUTPUT] image_path
+usage: ascimg [-h] [--scale SCALE] [--invert INVERT] [--output OUTPUT] image_path
 
 Converts an image to ASCII art.
 
