@@ -57,6 +57,8 @@ def main():
 
     # ruta de la imagen que se quiere visualizar
     parser.add_argument("filesource", type=str, help="Path to image file")
+    # escala de la imagen, esto permite cambiar la resolucion para mejorar la visualizacion en la terminal
+    # Requiere un numero int o float como argumento
     parser.add_argument(
         "-s",
         "--scale",
@@ -64,7 +66,10 @@ def main():
         help="sets the scale of the display relative to the original image size",
         type=float,
     )
+    # Permite cambiar el orden de los caranteres de mas oscuro a claro para adaptarse a diferentes tonalidades del fondo de la terminal
+    # Requiere Truo o False como argumento
     parser.add_argument("-i", "--invert", default=False, type=bool)
+    # genera un archivo con los caracteres de la imagen, requiere el nombre del archivo deseado como argumento
     parser.add_argument("-o", "--output", type=str)
 
     args = parser.parse_args()
