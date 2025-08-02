@@ -105,7 +105,7 @@ ascimg <path_to_your_image> [options]
 * **Combine options:**
 
     ```bash
-    ascimg path/to/my_photo.gif --width 120 --chars "MWN#$@%&*+=-:. " -o output.txt
+    ascimg path/to/my_photo.png -s 0.2 -o output.txt -i True
     ```
 
 ---
