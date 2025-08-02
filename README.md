@@ -52,6 +52,7 @@ The easiest way to install `Ascimg` is by using the `build_and_deploy_py.py` aut
     ```
     opencv-python
     numpy
+    nuitka
     ```
 
 3. **Run the compilation and deployment script:**
