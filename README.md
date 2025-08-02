@@ -1,6 +1,7 @@
 
 # Ascimg: Your Image to ASCII Art Converter 🎨
 
+`
 ............................................................................
 ............................................................................
 ........▓▓▓........▓▓▓▓▓........▓▓▓▓▓....▓▓▓..▓▓▓▓.....▓▓▓..... ▓▓▓▓▓ ......
@@ -18,7 +19,7 @@
 ....▓▓ ......▓▓▓....▓▓▓▓........▓▓▓▓.....▓▓▓..▓▓▓..▓▓▒..▓▓......▓▓▓▓▓ ......
 ............................................................................
 ............................................................................
-
+`
 **Ascimg** is a command-line tool written in Python that allows you to transform any image into vibrant (or not so vibrant) ASCII art. With customization options for scaling and characters, you can create unique artworks directly in your terminal or save them to a file.
 
 ---
@@ -96,22 +97,18 @@ ascimg <path_to_your_image> [options]
     ascimg photos/my_image.png
     ```
 
-* **Specify an output width of 80 characters:**
-
-    ```bash
-    ascimg image.jpg --width 80
-    ```
-
 * **Scale the image to 5% of its original size:**
 
     ```bash
     ascimg selfie.jpeg --scale 0.05
     ```
 
-* **Use a custom ASCII character set (from dark to light):**
+* **Invert the order of ASCII characters, lighter characters will be used for darker pixels and vice versa (False by default):**
 
     ```bash
-    ascimg landscape.png --chars " .:-=+*#%@"
+    ascimg my_image.png --invert True
+    # Or the short form:
+    ascimg my_image.png -i True
     ```
 
 * **Save the output to a text file:**
@@ -147,6 +144,8 @@ options:
                         A smaller value (e.g., 0.05) produces denser ASCII art.
                         This value is ignored if --width is used.
                         Default: 0.1
+  --invert, -i          Inverts the order of ASCII characters. Lighter characters
+                        will be used for darker pixels and vice versa.
   --output OUTPUT, -o OUTPUT
                         Path to the file where the ASCII art will be saved.
                         If not specified, it will be printed to the console.
