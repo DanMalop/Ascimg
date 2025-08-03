@@ -11,11 +11,7 @@
 
 ## Features ✨
 
-* **Grayscale Conversion:** Processes your images in black and white for ASCII conversion.
-
-* **Flexible Resizing:** Scale your image by a given factor or specify a fixed width for the ASCII output, maintaining aspect ratio.
-
-* **Customizable Character Set:** Define your own brightness scale using any sequence of ASCII characters.
+* **Flexible Resizing:** Scale your image by a given factor size for the ASCII output, maintaining aspect ratio.
 
 * **Console or File Output:** Prints the ASCII art directly to your terminal or saves it to a text file.
 
