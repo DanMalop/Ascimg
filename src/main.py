@@ -65,16 +65,20 @@ def main():
         "-s",
         "--scale",
         default=0.3,
-        help="Scale factor to resize the image before conversion.\nA smaller value (e.g., 0.05) produces denser ASCII art.\nDefault: 0.3",
+        help="""Scale factor to resize the image before conversion.
+        A smaller value (e.g., 0.05) produces denser ASCII art.
+        Default: 0.3""",
         type=float,
     )
     # Permite cambiar el orden de los caranteres de mas oscuro a claro para adaptarse a diferentes tonalidades del fondo de la terminal
     # Requiere Truo o False como argumento
     parser.add_argument("-i", "--invert", default=False, type=bool,
-                        help="Inverts the order of ASCII characters. Lighter characters\nwill be used for darker pixels and vice versa.")
+                        help="""Inverts the order of ASCII characters. Lighter characters
+                        will be used for darker pixels and vice versa.""")
     # genera un archivo con los caracteres de la imagen, requiere el nombre del archivo deseado como argumento
     parser.add_argument("-o", "--output", type=str,
-                        help="Path to the file where the ASCII art will be saved.\nIf not specified, it will be printed to the console.")
+                        help="""Path to the file where the ASCII art will be saved.
+                        If not specified, it will be printed to the console.""")
 
     args = parser.parse_args()
 
