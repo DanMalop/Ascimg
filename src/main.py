@@ -77,7 +77,7 @@ def main():
     args = parser.parse_args()
 
     # lista de caracteres que representan los niveles de luz
-    asciichars = ["▓", "▒", "░", "$", "*", ".", " "]
+    asciichars = ["▓", "▒", "░", "*", ".", " "]
     try:
         imgprosc = imgprepare(str(args.filesource), float(args.scale))
         ascii_output = asciiconv(imgprosc, asciichars, args.invert)
