@@ -47,7 +47,7 @@ The easiest way to install `Ascimg` is by using the `build_and_deploy_py.py` aut
     ```
 
 2. **Ensure you have the `requirements.txt` file:**
-    `Ascimg` requires `opencv-python` and `numpy`. These will be automatically installed in a virtual environment during the compilation process. Your `requirements.txt` file should contain:
+    `Ascimg` requires `opencv-python`, `numpy` and `nuitka`. These will be automatically installed in a virtual environment during the compilation process. Your `requirements.txt` file should contain:
 
     ```
     opencv-python
@@ -127,9 +127,8 @@ options:
   -h, --help            show this help message and exit
   --scale SCALE, -s SCALE
                         Scale factor to resize the image before conversion.
-                        A smaller value (e.g., 0.05) produces denser ASCII art.
-                        This value is ignored if --width is used.
-                        Default: 0.1
+                        A smaller value (e.g., 0.05) produces denser ASCII art. 
+                        Default: 0.3
   --invert, -i          Inverts the order of ASCII characters. Lighter characters
                         will be used for darker pixels and vice versa.
   --output OUTPUT, -o OUTPUT

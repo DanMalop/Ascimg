@@ -58,21 +58,23 @@ def main():
     )
 
     # ruta de la imagen que se quiere visualizar
-    parser.add_argument("filesource", type=str, help="Path to image file")
+    parser.add_argument("filesource", type=str, help="Path to the image file (e.g., 'monio.png').")
     # escala de la imagen, esto permite cambiar la resolucion para mejorar la visualizacion en la terminal
     # Requiere un numero int o float como argumento
     parser.add_argument(
         "-s",
         "--scale",
         default=0.3,
-        help="sets the scale of the display relative to the original image size",
+        help="Scale factor to resize the image before conversion.\nA smaller value (e.g., 0.05) produces denser ASCII art.\nDefault: 0.3",
         type=float,
     )
     # Permite cambiar el orden de los caranteres de mas oscuro a claro para adaptarse a diferentes tonalidades del fondo de la terminal
     # Requiere Truo o False como argumento
-    parser.add_argument("-i", "--invert", default=False, type=bool)
+    parser.add_argument("-i", "--invert", default=False, type=bool,
+                        help="Inverts the order of ASCII characters. Lighter characters\nwill be used for darker pixels and vice versa.")
     # genera un archivo con los caracteres de la imagen, requiere el nombre del archivo deseado como argumento
-    parser.add_argument("-o", "--output", type=str)
+    parser.add_argument("-o", "--output", type=str,
+                        help="Path to the file where the ASCII art will be saved.\nIf not specified, it will be printed to the console.")
 
     args = parser.parse_args()
 
