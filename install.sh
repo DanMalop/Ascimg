@@ -1,6 +1,20 @@
 #!/bin/bash
-echo "
-............................................................................
+
+#---- configuration----
+VENV_DIR="venv"                      # Name of viertual environment directory
+REQUIREMENTS_FILE="requirements.txt" # Name of the requirements file
+MAIN_PROGRAM="main.py"               # Name of main program
+OUTPUT_NAME="ascimg"                 # Name of the Nuitka output executable file
+TARGET_BIN_DIR="/usr/local/bin"      # Destination directory for the executable
+
+#---- Colors for teminal output----
+GREEN='\e[1;32m'
+YELLOW='\e[1;33m'
+BLUE='\e[1;34m'
+RED='\e[1;31m'
+NC='\e[0m'
+
+echo -e "${BLUE}............................................................................
 ............................................................................
 ........▓▓▓........▓▓▓▓▓........▓▓▓▓▓....▓▓▓..▓▓▓▓.....▓▓▓..... ▓▓▓▓▓ ......
 ........▓▓▓▓......▓▓▓▓▓▓▓▓....▓▓▓▓▓▓▓▓...▓▓▓..▓▓▓▓▓...▓▓▓▓....▓▓▓▓▓▓▓▓▓.....
@@ -16,5 +30,9 @@ echo "
 ....▓▓▓......▓▓▓..▓▓▓▓▓▓▓▓....░▓▓▓▓▓▓▓...▓▓▓..▓▓▓..▓▓▓..▓▓....▒▓▓▓▓▓▓▓▓ ....
 ....▓▓ ......▓▓▓....▓▓▓▓........▓▓▓▓.....▓▓▓..▓▓▓..▓▓▒..▓▓......▓▓▓▓▓ ......
 ............................................................................
-............................................................................"
+............................................................................${NC}"
+
+echo -e "${YELLOW}
+---- Starting the compilation and deployment process ----${NC}"
+
 echo installing ...

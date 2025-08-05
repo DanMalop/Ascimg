@@ -5,6 +5,13 @@ import os
 import sys
 # Importamos numpy para tratamiento de datos y cv2 para tratamiento de imagenes
 
+# ---- Colors ----
+GREEN = "\033[0;32m"
+BLUE = "\033[0;34m"
+YELLOW = "\033[0;33m"
+RED = "\033[0;31m"
+NC = "\033[0m"
+
 
 # funcion encargada de preparar la imagen, matriz blanco y negro, y reducir resolucion
 def imgprepare(imgsrc: str, factorscaling: float) -> np.ndarray:
@@ -58,7 +65,9 @@ def main():
     )
 
     # ruta de la imagen que se quiere visualizar
-    parser.add_argument("filesource", type=str, help="Path to the image file (e.g., 'monio.png').")
+    parser.add_argument(
+        "filesource", type=str, help="Path to the image file (e.g., 'monio.png')."
+    )
     # escala de la imagen, esto permite cambiar la resolucion para mejorar la visualizacion en la terminal
     # Requiere un numero int o float como argumento
     parser.add_argument(
@@ -72,15 +81,27 @@ def main():
     )
     # Permite cambiar el orden de los caranteres de mas oscuro a claro para adaptarse a diferentes tonalidades del fondo de la terminal
     # Requiere Truo o False como argumento
-    parser.add_argument("-i", "--invert", default=False, type=bool,
-                        help="""Inverts the order of ASCII characters. Lighter characters
-                        will be used for darker pixels and vice versa.""")
+    parser.add_argument(
+        "-i",
+        "--invert",
+        default=False,
+        type=bool,
+        help="""Inverts the order of ASCII characters. Lighter characters
+                        will be used for darker pixels and vice versa.""",
+    )
     # genera un archivo con los caracteres de la imagen, requiere el nombre del archivo deseado como argumento
-    parser.add_argument("-o", "--output", type=str,
-                        help="""Path to the file where the ASCII art will be saved.
-                        If not specified, it will be printed to the console.""")
+    parser.add_argument(
+        "-o",
+        "--output",
+        type=str,
+        help="""Path to the file where the ASCII art will be saved.
+                        If not specified, it will be printed to the console.""",
+    )
+    # color de los caracteres de la imagen
+    # parser.add_argument("-c", "--color", type=str)
 
     args = parser.parse_args()
+    print(type(args))
 
     # lista de caracteres que representan los niveles de luz
     asciichars = ["▓", "▒", "░", "*", ".", " "]
