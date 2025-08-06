@@ -15,6 +15,7 @@ def output_file(output_path: str, ascii_img: list[str]):
 
 def print_color(text: str, color: str):
     color_low = color.strip().lower()
+    color_print = ''
 
     for i in range(len(cf.COLORS[0])):
         if color_low == cf.COLORS[0][i]:
