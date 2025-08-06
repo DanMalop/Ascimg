@@ -1,9 +1,5 @@
 ASCIICHARS = ["▓", "▒", "░", "*", ".", " "]
 DEFAULT_SCALE = 0.3
 
-# ---- Colors ----
-GREEN = "\033[0;32m"
-BLUE = "\033[0;34m"
-YELLOW = "\033[0;33m"
-RED = "\033[0;31m"
-NC = "\033[0m"
+COLORS = [['red',        'green',      'blue',       'yellow',     'No_color'],
+          ["\033[0;31m", "\033[0;32m", "\033[0;34m", "\033[0;33m", "\033[0m"]]

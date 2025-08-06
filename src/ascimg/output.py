@@ -15,16 +15,10 @@ def output_file(output_path: str, ascii_img: list[str]):
 
 def print_color(text: str, color: str):
     color_low = color.strip().lower()
-    color_print = ""
 
-    if color_low == "red":
-        color_print = cf.RED
-    elif color_low == "blue":
-        color_print = cf.BLUE
-    elif color_low == "green":
-        color_print = cf.GREEN
-    elif color_low == "yellow":
-        color_print = cf.YELLOW
-    else:
-        color_print = ""
-    print(color_print + text + cf.NC)
+    for i in range(len(cf.COLORS[0])):
+        if color_low == cf.COLORS[0][i]:
+            color_print = cf.COLORS[1][i]
+            break
+
+    print(color_print + text + cf.COLORS[1][-1])

@@ -43,6 +43,6 @@ def console_input():
                         If not specified, it will be printed to the console.""",
     )
     # color de los caracteres de la imagen
-    parser.add_argument("-c", "--color", type=str, default="white")
+    parser.add_argument("-c", "--color", type=str, default="terminal_default")
 
     return parser.parse_args()
