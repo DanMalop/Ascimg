@@ -30,19 +30,26 @@ def console_input():
         "-i",
         "--invert",
         default=False,
-        type=bool,
         help="""Inverts the order of ASCII characters. Lighter characters
-                        will be used for darker pixels and vice versa.""",
+        will be used for darker pixels and vice versa.""",
+        type=bool,
     )
     # genera un archivo con los caracteres de la imagen, requiere el nombre del archivo deseado como argumento
     parser.add_argument(
         "-o",
         "--output",
-        type=str,
         help="""Path to the file where the ASCII art will be saved.
                         If not specified, it will be printed to the console.""",
+        type=str,
     )
     # color de los caracteres de la imagen
-    parser.add_argument("-c", "--color", type=str, default="terminal_default")
+    parser.add_argument(
+        "-c",
+        "--color",
+        help="""Select color of output characters between 4 optios:
+        Red, Green, Blue and Yellow""",
+        default="terminal_default",
+        type=str,
+    )
 
     return parser.parse_args()

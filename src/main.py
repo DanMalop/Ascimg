@@ -1,4 +1,5 @@
-from ascimg import input, output, ascii_converter, img_utils
+from ascii_image import ascii_converter, img_utils
+from utils import input, output
 from common.config import ASCIICHARS
 import sys
 
@@ -12,7 +13,7 @@ def main():
         ascii_output = ascii_converter.asciiconv(imgprosc, ASCIICHARS, args.invert)
 
         if args.output:
-            output.output_file(args.output, ascii_output)
+            img_utils.output_file(args.output, ascii_output)
         else:
             for line in ascii_output:
                 output.print_color(line, args.color)

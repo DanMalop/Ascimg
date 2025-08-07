@@ -13,6 +13,8 @@
 
 * **Flexible Resizing:** Scale your image by a given factor size for the ASCII output, maintaining aspect ratio.
 
+* **Select color:** Select the color of the output ASCII image
+
 * **Console or File Output:** Prints the ASCII art directly to your terminal or saves it to a text file.
 
 * **Compiled with Nuitka:** The program is distributed as a single executable file for easy installation and use without Python dependencies.
@@ -93,6 +95,14 @@ ascimg <path_to_your_image> [options]
     ascimg my_image.png -i True
     ```
 
+* Select the color of the output characters that conform the image, there are four option colors: Red, Green, Blue and Yellow.
+
+    ```bash
+    ascimg my_image.png --color Blue
+    # Or the short form:
+    ascimg my_image.png -c Blue
+    ```
+
 * **Save the output to a text file:**
 
     ```bash
@@ -112,7 +122,7 @@ ascimg <path_to_your_image> [options]
 Here are all the available options for `ascimg`:
 
 ```
-usage: ascimg [-h] [--scale SCALE] [--invert INVERT] [--output OUTPUT] image_path
+usage: ascimg [-h] [--scale SCALE] [--invert INVERT] [--color COLOR] [--output OUTPUT] image_path
 
 Converts an image to ASCII art.
 
@@ -125,8 +135,12 @@ options:
                         Scale factor to resize the image before conversion.
                         A smaller value (e.g., 0.05) produces denser ASCII art. 
                         Default: 0.3
-  --invert, -i          Inverts the order of ASCII characters. Lighter characters
+  --invert INVERT, -i INVERT   
+                        Inverts the order of ASCII characters. Lighter characters
                         will be used for darker pixels and vice versa.
+  --color COLOR, -c COLOR           
+                        Select color of output characters between 4 optios:
+                        Red, Green, Blue and Yellow
   --output OUTPUT, -o OUTPUT
                         Path to the file where the ASCII art will be saved.
                         If not specified, it will be printed to the console.
