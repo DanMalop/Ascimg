@@ -44,7 +44,7 @@ def console_input():
     )
     # color de los caracteres de la imagen
     parser.add_argument(
-        "-c",
+        "-cl",
         "--color",
         help="""Select color of output characters between 4 optios:
         Red, Green, Blue and Yellow""",

@@ -100,7 +100,7 @@ ascimg <path_to_your_image> [options]
     ```bash
     ascimg my_image.png --color Blue
     # Or the short form:
-    ascimg my_image.png -c Blue
+    ascimg my_image.png -cl Blue
     ```
 
 * **Save the output to a text file:**
@@ -138,7 +138,7 @@ options:
   --invert INVERT, -i INVERT   
                         Inverts the order of ASCII characters. Lighter characters
                         will be used for darker pixels and vice versa.
-  --color COLOR, -c COLOR           
+  --color COLOR, -cl COLOR           
                         Select color of output characters between 4 optios:
                         Red, Green, Blue and Yellow
   --output OUTPUT, -o OUTPUT
